@@ -4,10 +4,19 @@ import { card } from './card.jsx';
 import { Boton } from '../components/button.jsx';
 import { Search } from '../components/barra-search.jsx';
 import { Link } from 'react-router-dom';
+import { useState, useEffect } from 'react';
 
-const apiData = fetchData("https://thesimpsonsquoteapi.glitch.me/quotes?count=1");
+
+var apiData = fetchData("https://thesimpsonsquoteapi.glitch.me/quotes?count=1");
 
 export function Frases(){
+   
+    const [more, setMore]=useState(false);
+
+    useEffect(() => {
+        apiData = fetchData("https://thesimpsonsquoteapi.glitch.me/quotes?count=1");
+    }, [more])
+
     const data = apiData.read();
 
     return(
@@ -17,12 +26,12 @@ export function Frases(){
             </Link>
             <p className='titulo-frase'>Discover some Simpsons quotes</p>
             <Search />
-            <Suspense fallback={<div>Loading...</div>}>
+            <Suspense fallback={<div>Loading...</div>} >
                 {data ?.map((user)=> (
                     card(user.character, user.quote, user.image)
                 ))}
             </Suspense>
-            <Boton texto={'Show me more'} clase={'more'}/>
+            <Boton texto={'Show me more'} clase={'more'} click={()=>(setMore(!more))} />
         </div>
     )
 }
