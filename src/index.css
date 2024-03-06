@@ -1,0 +1,207 @@
+@import url('https://fonts.googleapis.com/css2?family=Londrina+Solid:wght@100;300;400;900&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+    font-family: Londrina Solid;
+}
+
+body{
+    display: flex;
+    background-image: url("./assets/Clouds.jpg");
+    background-size:cover;
+    background-repeat: no-repeat;
+    width: 100vw;
+    height: 100vh;
+}
+.espacio{
+    display: flex;
+    width: 100%;
+    height: 100%;
+    align-items: center;
+    justify-content: center;
+}
+
+#root{
+    display: flex;
+    width: 450px;
+    height: 100%;
+}
+.portada{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 100%;
+    flex-direction: column;
+    gap:10px;
+}
+.name{
+    width: 100%;
+    height: 20%;
+}
+.family{
+    max-width: 1200px;
+    min-width: 350px;
+    width: 70%;
+    height: 60%;
+    filter: drop-shadow(0 0 10px rgba(0, 0, 0, .5));
+}
+.pie-login{
+    height: 7%;
+    display:flex;
+    gap:5%;
+    justify-content: center;
+}
+
+.frases{
+    width: 150px;
+    height: 100%;
+    cursor: pointer;
+    border:1.5px solid;
+    font-size: 1.5rem;
+    background-color: rgb(255 222 0);
+    transition: all .3s;
+    border-radius: 20px;
+    box-shadow: -4px 4px rgba(0,0,0,0.5);
+}
+
+.frases:hover{
+    border:0 solid;
+    font-size: 2rem;
+    width: 155px;
+    height: 101%;
+}
+.sonido:hover{
+    border:0 solid;
+    font-size: 2.8rem;
+
+}
+.sonido{
+    color:rgb(0, 0, 0);
+    background-color: rgb(255 222 0);
+    font-size: 2.5rem;
+    border:1.5px solid;
+    cursor: pointer;
+    transition: all .3s;
+    border-radius: 14px;
+    box-shadow: -3px 3px rgba(0,0,0,0.5);
+}
+
+/*-- frases --*/
+.test{
+    width: 100%;
+    height: 90%;
+    display: flex;
+    position: relative;
+    gap:10px;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    
+}
+
+.logo-frases{
+    display: flex;
+    position: absolute;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    top:0;
+    left:10px;
+    max-width: 100px;
+    min-width: 100px;
+}
+
+.button-search{
+    display: flex;
+    position: absolute;
+    top: 100px;
+    flex-direction: column;
+    border: none;
+    width: 100%;
+    height: 40px;
+    border-radius: 15px;
+    padding: 10px;
+    min-width: 400px;
+    max-width: 80%;
+    background-color: rgb(255 222 0);
+    color:black;
+    font-size: 1.2rem;
+}
+
+.titulo-frase{
+    display: flex;
+    position: absolute;
+    top: 60px;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    color:white;
+    font-size: 1.5rem;
+    min-width: 400px;
+}
+
+.frase{
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    background-color: rgb(255 222 0);
+    border-radius: 10px;
+    width: 70%;
+    height: 200px;
+    min-width: 350px;
+    padding: 8px;
+}
+.frase-todo{
+    display: flex;
+    position: relative;
+    flex-direction: row;
+    background-color: white;
+    margin:2% 2% 1% 2%;
+    width: 96%;
+    height: 100%;
+    border-radius: 10px;
+}
+.frase-texto{
+    position: absolute;
+    margin:5% 0 5% 5%;
+    left:0;
+    width: 50%;
+}
+.frase-imagen{
+    display: flex;
+    position: absolute;
+    justify-content: right;
+    right:0;
+    margin:1%;
+    bottom:0;
+    width: 50%;
+}
+.nombre{
+    display: flex;
+    justify-content: center;
+}
+.frase-perso{
+    width: 40%;
+}
+
+.more{
+    display: flex;
+    position: absolute;
+    justify-content: center;
+    bottom: 20px;
+    width: 20%;
+    cursor: pointer;
+    border:1.5px solid;
+    font-size: 1.5rem;
+    background-color: rgb(255 222 0);
+    transition: all .3s;
+    border-radius: 20px;
+    box-shadow: -4px 4px rgba(0,0,0,0.5);  
+    min-width: 300px; 
+}
+.more:hover{
+    border:0 solid;
+    font-size: 1.8rem;
+}
